@@ -41,7 +41,7 @@
 
                 if($panier){
                     # Si le panier existe, on incrémente la quantité
-                    $sql = "UPDATE panier SET quantite = quantite + 1 WHERE id=?";
+                    $sql = "UPDATE panier SET quantité = quantité + 1 WHERE id=?";
                     $stmt = mysqli_prepare($connection, $sql);
                     $query = mysqli_stmt_bind_param($stmt, "i", $panier['id']);
                     mysqli_stmt_execute($stmt);
